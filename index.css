@@ -2,6 +2,7 @@
 	--base-color: white;
 	--base-variant: #e8e9ed;
 	--text-color: black;
+	--text-variant: #d0d1d5;
 }
 
 .darkmode {
@@ -121,7 +122,7 @@ p {
 }
 
 .game-card {
-	background-color: #fff;
+	background-color: var(--base-color);
 	padding: 15px;
 	border-radius: 8px;
 	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -140,6 +141,42 @@ p {
 }
 
 .game-card-icon {
+	display: block;
+	width: clamp(100px, 200px, 250px);
+	margin-right: 20px;
+}
+
+/* Three columns side by side */
+.column {
+	float: left;
+	width: 50%;
+	margin-bottom: 16px;
+	padding: 0 8px;
+}
+
+/* Add some shadows to create a card effect */
+.about-card {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Some left and right padding inside the container */
+.container {
+	padding: 0 16px;
+}
+
+/* Clear floats */
+.container::after,
+.row::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+
+.title {
+	color: var(--text-variant);
+}
+
+.about-card-icon {
 	display: block;
 	width: clamp(100px, 200px, 250px);
 	margin-right: 20px;
