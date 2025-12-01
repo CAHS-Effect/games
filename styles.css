@@ -131,7 +131,7 @@ img {
 .gameContainer img {
 	background-color: var(--base-variant);
 	float: left;
-	max-width: 200px;
+	width: 200px;
 	margin-right: 18px;
 }
 
