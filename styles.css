@@ -51,7 +51,7 @@ body {
   width: 100%;
   transform: scaleX(0);
   height: 2px;
-  bottom: 0;
+  bottom: -2px;
   left: 0;
   background-color: var(--text-color);
   transform-origin: bottom right;
@@ -61,6 +61,14 @@ body {
 .hover-underline-animation:hover::after {
   transform: scaleX(1);
   transform-origin: bottom left;
+}
+
+header {
+	padding: 200px 15px 100px 15px;
+}
+
+header > h1 {
+	vertical-align: center;
 }
 
 h2 {
@@ -116,8 +124,14 @@ p {
 	width: 50%;
 }
 
+img {
+	border: 0;
+}
+
 .gameContainer img {
 	background-color: var(--base-variant);
 	float: left;
+	max-width: 200px;
+	margin-right: 18px;
 }
 
