@@ -5,14 +5,15 @@
 }
 
 .darkmode {
-	--base-color: black;
-	--base-variant: #e8e9ed;
+	--base-color: #121212;
+	--base-variant: #333;
 	--text-color: white;
 }
 
 body {
 	font-family: "Rubik";
 	margin: 0px;
+	background-color: var(--base-color);
 }
 
 .navbar {
@@ -22,6 +23,7 @@ body {
 	width: 100%;
 	transition: top 0.3s;
 	margin-bottom: 30px;
+	border-bottom: 2px solid var(--base-variant);
 }
 
 .navbar a {
@@ -30,7 +32,7 @@ body {
 	text-align: center;
 	padding: 14px 16px;
 	text-decoration: none;
-	font-size: 17px;
+	font-size: 18px;
 }
 
 .navbar-right {
@@ -38,13 +40,46 @@ body {
 	margin-right: 20px;
 }
 
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+}
+
+.hover-underline-animation::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--text-color);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
 h2 {
 	padding: 15px 15px;
 	font-size: 30px;
 	margin-top: 50px;
+	color: var(--text-color);
+}
+
+h3 {
+	color: var(--text-color);
+}
+
+p {
+	color: var(--text-color);
 }
 
 #theme-switch {
+	border: none;
 	height: 50px;
 	width: 50px;
 	padding: 0;
@@ -52,10 +87,11 @@ h2 {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	cursor: pointer;
 }
 
 #theme-switch svg {
-	fill: var(--primary-color);
+	fill: var(--text-color);
 }
 
 #theme-switch svg:last-child {
@@ -69,3 +105,19 @@ h2 {
 .darkmode #theme-switch svg:last-child {
 	display: block;
 }
+.games {
+	width: 100%;
+	display: block;
+}
+.gameContainer {
+	float: left;
+ margin-bottom: 16px;
+  padding: 0 8px;
+	width: 50%;
+}
+
+.gameContainer img {
+	background-color: var(--base-variant);
+	float: left;
+}
+
